@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.NetworkInformation;
+using System.Collections.Generic;
 
 namespace Euler
 {
@@ -9,6 +11,7 @@ namespace Euler
             string threeToFive = Mult3_5(1000);
             Console.WriteLine(threeToFive);
             Console.WriteLine(EvenFib(4000000));
+            LargestPrimeFactor();
         }
 
         static public string Mult3_5(int limit)
@@ -47,11 +50,59 @@ namespace Euler
                 }
                 int tempFib = fib1;
                 fib1 = fib2;
-                fib2 = fib2 + tempFib;
+                fib2 += tempFib;
             }
 
             return $"The sum of all even fibonnacci numbers less than {limit} is {sum}.";
         }
+
+        static public void LargestPrimeFactor()
+        {
+            /* PROBLEM DESCRIPTION
+                The prime factors of 13195 are 5, 7, 13 and 29.
+                What is the largest prime factor of the number 600851475143 ?
+            */
+            long startingNumber = 600851475143;
+            List<int> primeFactors = new List<int>();
+            List<int> primes = new List<int> { 2 };
+            for (int i = 3; i < 10000; i += 2)
+            {
+                bool isPrime = true;
+                foreach (int prime in primes)
+                {
+                    if (i % prime == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                {
+                    primes.Add(i);
+                    Console.WriteLine(i);
+                }
+            }
+            while (startingNumber > 1)
+            {
+                foreach(int prime in primes)
+                {
+                    if (startingNumber % prime == 0)
+                    {
+                        primeFactors.Add(prime);
+                        startingNumber /= prime;
+                        Console.WriteLine(prime);
+                        break;
+                    }
+                }
+            }
+
+            foreach (int factor in primeFactors)
+            { Console.WriteLine(factor); }
+
+            return;
+        }
     }
 }
+//600851475143
+//71, 839
 
