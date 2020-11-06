@@ -11,7 +11,8 @@ namespace Euler
             string threeToFive = Mult3_5(1000);
             Console.WriteLine(threeToFive);
             Console.WriteLine(EvenFib(4000000));
-            LargestPrimeFactor();
+            //LargestPrimeFactor();
+            Console.WriteLine(LargestPalindrome());
         }
 
         static public string Mult3_5(int limit)
@@ -65,6 +66,8 @@ namespace Euler
             long startingNumber = 600851475143;
             List<int> primeFactors = new List<int>();
             List<int> primes = new List<int> { 2 };
+
+            // Builds list of prime numbers up to 10000
             for (int i = 3; i < 10000; i += 2)
             {
                 bool isPrime = true;
@@ -82,6 +85,8 @@ namespace Euler
                     Console.WriteLine(i);
                 }
             }
+
+            // Finds prime factors from list of primes
             while (startingNumber > 1)
             {
                 foreach(int prime in primes)
@@ -101,8 +106,57 @@ namespace Euler
 
             return;
         }
+
+        static public int LargestPalindrome()
+        {
+            /* PROBLEM DESCRIPTION
+             * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+                Find the largest palindrome made from the product of two 3-digit numbers.
+            */
+            string palindrome;
+            int largestPalindrome = 0;
+
+            // 2 nested loops to iterate through products, prevents repeat analysis by keeping j equal to i
+            for (int i = 999; i > 1; i--)
+            {
+                for (int j = i; j > 1; j--)
+                {
+                    bool isPalindrome = true;
+
+                    int product = i * j;
+                    if (product < largestPalindrome)
+                    { break; }
+
+                    palindrome = product.ToString();
+                    int x = 0;
+                    int y = palindrome.Length - 1;
+
+                    // Evaluates palindrome status, breaks when it's no longer a palindrome without repeating comparisons
+                    while (x < y)
+                    {
+                        if (palindrome[x] == palindrome[y])
+                        {
+                            x++;
+                            y--;
+                        }
+                        else
+                        {
+                            isPalindrome = false;
+                            break;
+                        }
+                    }
+
+                    // Tracks largest palindromic number
+                    if (isPalindrome)
+                    {
+                        if (product > largestPalindrome)
+                        { largestPalindrome = product; }
+                        break;
+                    }
+                }
+            }
+
+            return largestPalindrome;
+        }
     }
 }
-//600851475143
-//71, 839
-
