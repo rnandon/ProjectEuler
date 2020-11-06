@@ -1,0 +1,13 @@
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.exe
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.deps.json
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.runtimeconfig.json
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.runtimeconfig.dev.json
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.dll
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\bin\Debug\netcoreapp3.1\Euler.pdb
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.csprojAssemblyReference.cache
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.AssemblyInfoInputs.cache
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.AssemblyInfo.cs
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.csproj.CoreCompileInputs.cache
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.dll
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.pdb
+C:\Users\rnanc\Documents\Csharp\Projects\ProjectEuler\Euler\obj\Debug\netcoreapp3.1\Euler.genruntimeconfig.cache
